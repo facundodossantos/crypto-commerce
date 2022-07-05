@@ -1,22 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+// import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import NavBar from './components/navBar/NavBar';
+// import items from './data/items';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Crypto-Commerce
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        </a>
-      </header>
+      <NavBar />
+      {/* <ItemListContainer items={items}/> */}
     </div>
   );
 }
