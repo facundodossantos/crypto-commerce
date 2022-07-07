@@ -1,10 +1,10 @@
 const items = [
     {
         id: 1,
-        name: 'Item 1',
-        description: 'This is item 1',
+        name: 'NFT',
+        description: 'This is NFT 1',
         price: '$1.00',
-        image: 'https://picsum.photos/200/300?image=1',
+        image: 'https://public.nftstatic.com/static/nft/zipped/510a3a7cac1747e390485f513755604e_zipped.png',
         quantity: 1
 
     }

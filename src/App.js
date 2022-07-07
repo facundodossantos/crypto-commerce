@@ -1,13 +1,13 @@
 import './App.scss';
-// import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from './components/navBar/NavBar';
-// import items from './data/items';
+import items from './data/items';
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      {/* <ItemListContainer items={items}/> */}
+      <ItemListContainer items={items} greeting='Hola desde Item!'/>
     </div>
   );
 }
