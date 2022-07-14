@@ -1,10 +1,11 @@
 import Item from '../Item/Item';
 
-const ItemList = ({ items, greeting }) => {
+const ItemList = ({ items }) => {
     return (
-        <div className="flex flex-wrap justify-center mt-6">
+        <div className="flex flex-wrap justify-center mt-16">
         {items.map((item) => (
-            <Item key={item.id} item={item} greeting={greeting} />
+            
+            <Item key={item.id} item={item} />
         ))}
         </div>
     );
