@@ -12,7 +12,7 @@ const ItemListContainer = () => {
     const itemsList = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(nfts);
-      }, 1000);
+      }, 1500);
     });
 
     itemsList
