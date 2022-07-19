@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import ItemList from "./ItemList/ItemList";
+import ItemList from "../ItemList/ItemList";
 import nfts from "../../data/items";
 import Spinner from "../spinner/spinner";
 
 const ItemListContainer = () => {
 
-  let [items, setItems] = useState([]);
-  let [isLoading, setIsLoading] = useState(true);
+  const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const itemsList = new Promise((resolve, reject) => {
