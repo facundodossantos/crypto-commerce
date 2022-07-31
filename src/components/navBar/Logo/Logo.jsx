@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { Link } from "react-router-dom";
 const Logo = () => {
   return (
-    <a>
-      <h2 className="text-2xl font-bold">LOGO</h2>
-    </a>
+    <Link to="/">
+        <h2 className="text-violet-500 text-2xl font-bold">LOGO</h2>
+    </Link>
   );
 };
 

@@ -1,14 +1,18 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import ItemDetail from "../itemDetail/ItemDetail";
 import nfts from "../../data/items";
 import Spinner from "../spinner/spinner";
+import { useParams } from "react-router-dom";
 
-const ItemDetailContainer = ({id}) => {
+const ItemDetailContainer = () => {
 
   const [item, setItem] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const { id: itemId } = useParams();
 
   useEffect(() => {
+    console.log(itemId)
     const getItem = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(nfts);
@@ -17,12 +21,12 @@ const ItemDetailContainer = ({id}) => {
 
     getItem
       .then((resp) => {
-        setItem(resp.map(item => item.id === id ? item : null).filter(item => item !== null));
+        const item = resp.find((item) => item.id === parseInt(itemId));
+        setItem(item);
         setIsLoading(false);
-        console.log(item);
       })
       .catch((error) => console.log(error));
-  }, [id, item]);
+  }, [itemId]);
 
   return (
     <div>
